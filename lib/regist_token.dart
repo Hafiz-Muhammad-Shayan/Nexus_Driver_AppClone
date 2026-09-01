@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nexus_driver_appclone/colors.dart';
+import 'package:nexus_driver_appclone/dashBoard.dart';
+import 'package:nexus_driver_appclone/mian_navigator.dart';
 
 class RegistToken extends StatelessWidget {
   const RegistToken({super.key});
@@ -152,7 +154,11 @@ class RegistToken extends StatelessWidget {
                 ),
 
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context) => MianNavigator(),));
+                  },
                   child: Container(
                     height: 40,
                     width: 280,
