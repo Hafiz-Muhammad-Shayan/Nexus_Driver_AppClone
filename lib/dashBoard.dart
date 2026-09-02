@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nexus_driver_appclone/booking_Scrn.dart';
 import 'package:nexus_driver_appclone/colors.dart';
 import 'package:nexus_driver_appclone/regist_token.dart';
+import 'package:nexus_driver_appclone/setings_screen.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -353,7 +355,10 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           InkWell(
                             onTap: () {
-                              // Messages screen
+                                    Navigator.push(
+                                        context, MaterialPageRoute(
+                                        builder: (context) => BookingScrn(),
+                                    ));
                             },
                             borderRadius: BorderRadius.circular(18),
                             child: Container(
@@ -455,7 +460,10 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           InkWell(
                             onTap: () {
-                              // Messages screen
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SetingsScreen(),));
                             },
                             borderRadius: BorderRadius.circular(18),
                             child: Container(
@@ -557,9 +565,9 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context, MaterialPageRoute(
-                                builder: (context) => RegistToken(),));
+                              // Navigator.push(
+                              //   context, MaterialPageRoute(
+                              //   builder: (context) => RegistToken(),));
                             },
                             borderRadius: BorderRadius.circular(18),
                             child: Container(
