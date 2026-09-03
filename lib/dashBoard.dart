@@ -27,13 +27,13 @@ class _DashboardState extends State<Dashboard> {
 
           Positioned.fill(
             child: Container(
-              color: Colors.black.withOpacity(0.15),
+              color: Colors.black.withOpacity(0.05),
             ),
           ),
 
           SafeArea(
               child: Padding(
-                padding: const EdgeInsets.only(top: 30,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
                 child: Column(
                   children: [
                     Row(
@@ -42,7 +42,7 @@ class _DashboardState extends State<Dashboard> {
                             "Driver Dashboard",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 25,
+                            fontSize: 23,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -207,7 +207,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
 
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
 
                     Row(
@@ -247,7 +247,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
 
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
 
                     SizedBox(

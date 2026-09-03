@@ -25,12 +25,12 @@ class BookingScrn extends StatelessWidget {
           ),
           Positioned.fill(
               child: Container(
-                color: Colors.black.withOpacity(0.15),
+                color: Colors.black.withOpacity(0.10),
               )),
 
           SafeArea(
               child: Padding(
-                padding: const EdgeInsets.only(top: 40,left: 20,right: 20),
+                padding: const EdgeInsets.only(top: 25,left: 20,right: 20),
                 child: Column(
                   children: [
                     Row(
@@ -38,27 +38,31 @@ class BookingScrn extends StatelessWidget {
                         InkWell(
                           child: Icon(
                               Icons.arrow_back,
-                              color: borderColor,
+                              color: iconColor,
+                              fontWeight: FontWeight.bold,
                           ),
                           onTap: (){
                             Navigator.pop(context);
                           },
                         ),
                         Spacer(),
-                        Text(
-                            "Bookings",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25),
+                          child: Text(
+                              "Bookings",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 23,
+                                fontWeight: FontWeight.bold,
+                              ),
+                          ),
                         ),
                         Spacer(),
                         Spacer(),
                       ],
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 50,
                     ),
                     Row(
                       children: [

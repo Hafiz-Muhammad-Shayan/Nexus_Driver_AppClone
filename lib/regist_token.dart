@@ -31,6 +31,7 @@ class RegistToken extends StatelessWidget {
                   style: TextStyle(
                     color: Color(0xFFFFFFFF),
                     fontSize:  20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
@@ -38,6 +39,8 @@ class RegistToken extends StatelessWidget {
                   style: TextStyle(
                     color: Color(0xFFFFFFFF),
                     fontSize: 20,
+                    fontWeight: FontWeight.bold,
+
                   ),
                 ),
 
@@ -52,7 +55,7 @@ class RegistToken extends StatelessWidget {
                     borderRadius: BorderRadius.circular(18),
 
                     border: Border.all(
-                      color:  Color(0xFF39FF14),
+                      color:  borderColor,
                       width: 1.5,
                     ),
 
@@ -104,7 +107,7 @@ class RegistToken extends StatelessWidget {
 
                         child: Icon(
                           Icons.credit_card,
-                          color: Color(0xFF39FF14),
+                          color: icon_color,
                           size: 15,
                         ),
                       ),
@@ -125,7 +128,7 @@ class RegistToken extends StatelessWidget {
                             "Forgot Token Number?",
                           style: TextStyle(
                             fontSize: 12,
-                            fontWeight: FontWeight.w200,
+                            fontWeight: FontWeight.w400,
                             color: Color(0xFF39FF14),
                         ),
                         ),
@@ -134,9 +137,9 @@ class RegistToken extends StatelessWidget {
                       Spacer(),
                       InkWell(
                         child: Text(
-                            "ASK ADMIN",
+                            "ASK ADMIN ?",
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF39FF14),
                           ),
@@ -160,7 +163,7 @@ class RegistToken extends StatelessWidget {
                             builder: (context) => MianNavigator(),));
                   },
                   child: Container(
-                    height: 40,
+                    height: 50,
                     width: 280,
                     child: Center(
                         child: Text(
@@ -172,7 +175,7 @@ class RegistToken extends StatelessWidget {
                           ),
                         )),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(18),
                       gradient: const LinearGradient(
                         colors: [
                           Color(0xFF32E312),
@@ -183,7 +186,7 @@ class RegistToken extends StatelessWidget {
                         end: Alignment.bottomCenter,
                       ),
                       border: Border.all(
-                          color: btn1_borderColor,),
+                          color: Colors.transparent,),
                     ),
                   ),
                 ),

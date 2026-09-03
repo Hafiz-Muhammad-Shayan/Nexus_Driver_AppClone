@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nexus_driver_appclone/logIn_screen.dart';
 
 import 'colors.dart';
-
 class Profile extends StatefulWidget {
   const Profile({super.key});
 
@@ -133,130 +132,137 @@ class _ProfileState extends State<Profile> {
           // Dark overlay
           Positioned.fill(
             child: Container(
-              color: Colors.black.withOpacity(0.15),
+              color: Colors.black.withOpacity(0.30),
             ),
           ),
 
           SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 28),
-              child: Column(
-                children: [
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 1,
+              width: MediaQuery.of(context).size.width * 1,
 
-                  SizedBox(
-                      height: 100,
-                  ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 28),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
 
-                  // ================= LOGO =================
-                  Image.asset(
-                    "assets/images/cabFlow_logo.png",
-                    width: 300,
-                    fit: BoxFit.contain,
-                  ),
-
-                  SizedBox(
-                    height: 85,
-                  ),
-
-                  // ================= AUTHENTICATION TOKEN =================
-                  Container(
-                    height: 68,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                        color: btn1_borderColor,
-                      )
-                    ),
-                    width: double.infinity,
-                    child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      onTap: (){},
-                      maxLines: null,
-                      minLines: null,
-                      expands: true,
-                      style: TextStyle(
-                        color: btn1_txtColor,
+                      SizedBox(
+                          height: 100,
                       ),
-                      decoration: InputDecoration(
-                        filled: true,
-                        constraints: BoxConstraints(maxHeight: 200),
-                        // contentPadding: EdgeInsets.zero,
-                        fillColor: btn1Color,
-                        hintText: "Authentication Token",
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(15),
+
+                      // ================= LOGO =================
+                      Image.asset(
+                        "assets/images/cabFlow_logo.png",
+                        width: 300,
+                        fit: BoxFit.contain,
+                      ),
+
+                      SizedBox(
+                        height: 85,
+                      ),
+
+                      // ================= AUTHENTICATION TOKEN =================
+                      Container(
+                        height: 68,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                            color: btn1_borderColor,
+                          )
                         ),
-                        hintStyle: TextStyle(
-                          fontSize: 18,
-                          color: btn1_txtColor,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        prefixIcon: Padding(
-                          padding: const EdgeInsets.only(left: 50),
-                          child: Icon(
-                            Icons.shield_outlined,
+                        width: double.infinity,
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          onTap: (){},
+                          maxLines: null,
+                          minLines: null,
+                          expands: true,
+                          style: TextStyle(
                             color: btn1_txtColor,
-                            size: 28,
                           ),
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 25,
-                  ),
-                  // ================= AUTHENTICATE =================
-                  SizedBox(
-                    width: double.infinity,
-                    height: 68,
-                    child: OutlinedButton(
-                      onPressed: () {
-                        // Authenticate
-                        AutModBotmsheet(
-                          context,
-                        );
-
-                      },
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: const Color(0xFF63D66D),
-
-                        side: const BorderSide(
-                          color: Color(0xFF63D66D),
-                          width: 1.5,
-                        ),
-
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(
-                            Icons.account_circle_outlined,
-                            size: 31,
-                          ),
-
-                          SizedBox(
-                            width: 15,
-                          ),
-
-                          Text(
-                            'Authenticate',
-                            style: TextStyle(
-                              fontSize: 19,
+                          decoration: InputDecoration(
+                            filled: true,
+                            constraints: BoxConstraints(maxHeight: 200),
+                            // contentPadding: EdgeInsets.zero,
+                            fillColor: btn1Color,
+                            hintText: "Authentication Token",
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            hintStyle: TextStyle(
+                              fontSize: 18,
+                              color: btn1_txtColor,
                               fontWeight: FontWeight.w600,
                             ),
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.only(left: 50),
+                              child: Icon(
+                                Icons.shield_outlined,
+                                color: btn1_txtColor,
+                                size: 28,
+                              ),
+                            ),
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
 
-                  Spacer(),
-                ],
+                      SizedBox(
+                        height: 25,
+                      ),
+                      // ================= AUTHENTICATE =================
+                      SizedBox(
+                        width: double.infinity,
+                        height: 68,
+                        child: OutlinedButton(
+                          onPressed: () {
+                            // Authenticate
+                            AutModBotmsheet(
+                              context,
+                            );
+
+                          },
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFF63D66D),
+
+                            side: const BorderSide(
+                              color: Color(0xFF63D66D),
+                              width: 1.5,
+                            ),
+
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.account_circle_outlined,
+                                size: 31,
+                              ),
+
+                              SizedBox(
+                                width: 15,
+                              ),
+
+                              Text(
+                                'Authenticate',
+                                style: TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      // Spacer(),
+                    ],
+                  ),
+                ),
               ),
             ),
           ),
