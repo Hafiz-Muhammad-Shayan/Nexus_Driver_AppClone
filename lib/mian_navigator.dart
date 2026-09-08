@@ -3,6 +3,7 @@ import 'package:nexus_driver_appclone/colors.dart';
 import 'package:nexus_driver_appclone/dashBoard.dart';
 import 'package:nexus_driver_appclone/jobs_screen.dart';
 import 'package:nexus_driver_appclone/profile.dart';
+import 'package:nexus_driver_appclone/profile_screen.dart';
 
 class MianNavigator extends StatefulWidget {
   const MianNavigator({super.key});
@@ -16,7 +17,7 @@ class _MianNavigatorState extends State<MianNavigator> {
   final screens = [
     Dashboard(),
     JobsScreen(),
-    Dashboard(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -47,8 +48,8 @@ class _MianNavigatorState extends State<MianNavigator> {
               BottomNavigationBarItem(icon: Icon(Icons.assignment,),
               label: "Jobs",
               ),
-              BottomNavigationBarItem(icon: Icon(Icons.pie_chart,),
-              label: "My earning",
+              BottomNavigationBarItem(icon: Icon(Icons.person,),
+              label: "Profile",
               ),
               // BottomNavigationBarItem(icon: Icon(Icons.pie_chart,),
               //   label: "My earning",

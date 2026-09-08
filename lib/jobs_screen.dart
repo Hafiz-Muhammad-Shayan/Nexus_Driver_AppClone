@@ -65,6 +65,7 @@ class JobsScreen extends StatelessWidget {
                     child: Icon(
                         Icons.arrow_back,
                       color: icon_color,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   Spacer(),
@@ -90,8 +91,8 @@ class JobsScreen extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  height: 40,
-                  width: 40,
+                  height: 45,
+                  width: 45,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     gradient: LinearGradient(
@@ -115,9 +116,9 @@ class JobsScreen extends StatelessWidget {
                     ),
                   ),
                   child: Icon(
-                    Icons.shopping_bag,
+                    Icons.business_center,
                     color: icon_color,
-                    size: 20,
+                    size: 22,
                   ),
                 ),
                 SizedBox(
@@ -284,9 +285,24 @@ class JobsScreen extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Jobs(),
-          Jobs(),
-          Jobs(),
+          Expanded(
+            child: Container(
+              height: 20,
+              width: double.infinity,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Jobs(),
+                    Jobs(),
+                    Jobs(),
+                    Jobs(),
+                    Jobs(),
+                    Jobs(),
+                  ],
+                ),
+              ),
+            ),
+          ),
 
 
 
