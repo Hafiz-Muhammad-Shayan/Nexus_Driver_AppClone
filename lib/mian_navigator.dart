@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nexus_driver_appclone/colors.dart';
 import 'package:nexus_driver_appclone/dashBoard.dart';
+import 'package:nexus_driver_appclone/jobs_screen.dart';
 import 'package:nexus_driver_appclone/profile.dart';
 
 class MianNavigator extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MianNavigatorState extends State<MianNavigator> {
   int _index = 0;
   final screens = [
     Dashboard(),
-    Profile(),
+    JobsScreen(),
     Dashboard(),
   ];
   @override
